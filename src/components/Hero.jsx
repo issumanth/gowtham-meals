@@ -41,7 +41,7 @@ function Hero() {
 
           {/* Location */}
           <a
-            href="https://maps.google.com/?q=Veldurthi,Kurnool"
+            href="https://maps.app.goo.gl/o3P7jmMeB6bZFiA39"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto border border-blue-700 text-blue-700 px-5 py-2 sm:px-6 sm:py-2.5 rounded-md text-sm sm:text-base font-medium hover:bg-blue-100 transition"
