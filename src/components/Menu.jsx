@@ -13,40 +13,50 @@ function Menu() {
     { name: "ఎగ్ రైస్", desc: "ఎగ్ ఫ్రైడ్ రైస్, కూర", price: 80 }
   ];
 
+  const phoneNumber = "917386064606";
+
   return (
     <section className="bg-white px-4 sm:px-6 md:px-8 py-6 md:py-8">
 
-      {/* Title */}
-      <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center mb-5 md:mb-6 text-blue-900">
+      <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center mb-5 text-blue-900">
         మా మెనూ
       </h2>
 
-      {/* Menu Box */}
-      <div className="max-w-md sm:max-w-xl md:max-w-2xl mx-auto divide-y border rounded-md overflow-hidden">
+      <div className="max-w-md sm:max-w-xl md:max-w-2xl mx-auto divide-y border rounded-md">
 
-        {menuItems.map((item, index) => (
-          <div
-            key={index}
-            className="flex justify-between items-center px-3 sm:px-4 py-3 hover:bg-blue-50 transition"
-          >
+        {menuItems.map((item, index) => {
 
-            {/* LEFT */}
-            <div className="min-w-0">
-              <h3 className="font-semibold text-sm sm:text-base truncate">
-                {item.name}
-              </h3>
-              <p className="text-[10px] sm:text-xs text-gray-500 truncate">
-                {item.desc}
-              </p>
-            </div>
+          const message = encodeURIComponent(
+            `Hi, I want to order ${item.name} (₹${item.price}). Please share your address.`
+          );
 
-            {/* RIGHT */}
-            <span className="font-bold text-blue-700 text-sm sm:text-base ml-2 shrink-0">
-              ₹{item.price}
-            </span>
+          return (
+            <a
+              key={index}
+              href={`https://wa.me/${phoneNumber}?text=${message}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex justify-between items-center px-3 sm:px-4 py-3 hover:bg-blue-50 transition cursor-pointer"
+            >
 
-          </div>
-        ))}
+              {/* LEFT */}
+              <div className="min-w-0">
+                <h3 className="font-semibold text-sm sm:text-base truncate">
+                  {item.name}
+                </h3>
+                <p className="text-[10px] sm:text-xs text-gray-500 truncate">
+                  {item.desc}
+                </p>
+              </div>
+
+              {/* RIGHT */}
+              <span className="font-bold text-blue-700 text-sm sm:text-base ml-2 shrink-0">
+                ₹{item.price}
+              </span>
+
+            </a>
+          );
+        })}
 
       </div>
 
