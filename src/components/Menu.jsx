@@ -33,7 +33,7 @@ function Menu({ lang }) {
   return (
     <section className="bg-white px-4 py-8">
 
-      <h2 className="text-xl font-bold text-center mb-6">
+      <h2 className="text-xl sm:text-2xl font-extrabold text-center mb-6 text-gray-900 drop-shadow-sm">
         {lang === "te" ? "మా మెనూ" : "Our Menu"}
       </h2>
 
