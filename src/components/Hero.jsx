@@ -30,7 +30,7 @@ Your function food is our responsibility!`,
   return (
     <section className="bg-blue-50 px-4 py-10 text-center">
 
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 drop-shadow-sm">
         {t.title}
       </h1>
 
